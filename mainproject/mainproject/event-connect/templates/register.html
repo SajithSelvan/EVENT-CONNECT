@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Register</title>
+	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form action="/reg" method="POST">
+					{% csrf_token %}
+					<br><label for="chk" aria-hidden="true">Admin Register</label>
+					<input type="text" name="name" placeholder="name" required="">
+					<input type="email" name="email" placeholder="email" required="">
+					<input type="password" name="password" placeholder="Password" required="">
+					<button>Register</button>
+				</form><br><br><br><br><br><br><br>
+				<div class="login">
+					<font color="white">Already a user?</font><br><a href="/" ><font color="yellow"> Sign in</font></a>
+					
+			</div>
+			</div>
+			
+			
+	</div>
+</body>
+</html>
+<style>
+body{
+	 background-image:url(https://images.unsplash.com/photo-1529539795054-3c162aab037a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bG9naW58ZW58MHx8MHx8&w=1000&q=80);
+	 background-repeat:no-repeat;
+	 background-size:cover;
+	 border-style: 1px solid grey;
+     margin: 0 auto;
+     text-align: center;
+     opacity: 0.9;
+     margin-top: 70px;
+	 max-width: 400px;
+     
+}
+  
+.main{
+	width: 350px;
+	height: 450px;
+	background: linear-gradient(to bottom, #0f0c29, #632b4e, #34347c);
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 5px 20px 50px #ebcd5e;
+}
+#chk{
+	display: none;
+}
+.signup{
+	position: relative;
+	width:100%;
+	height: 100%;
+}
+label{
+	color: #fff707;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 10px;
+	margin-bottom: 54px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+
+input{
+	width: 70%;
+	margin-top: 60px;
+	height: 15px;
+	background: #e0dede;
+	justify-content: center;
+	display: flex;
+	margin: 30px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+}
+button{
+	width: 40%;
+	height: 40px;
+	margin: 10px auto;
+	justify-content: center;
+	display: block;
+	color: #ffffff;
+	background: #e9ab19;
+	font-size: 1em;
+	font-weight: bold;
+	margin-top: 40px;
+	outline: none;
+	border: none;
+	border-radius: 5px;
+	transition: .2s ease-in;
+	cursor: pointer;
+}
+button:hover{
+	background: #44b8b2;
+}
+.login{
+	height: 500px;
+	/* background: #e4f92a; */
+	border-radius: 40px; 
+	transform: translateY(-101px);
+	transition: .8s ease-in-out;
+}
+</style>
+<!-- /* .login label{
+	/* color: #000000; */
+	/* transform: scale(.6); */
+/* } */ */
+
+/* #chk:checked ~ .login{
+	transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+	transform: scale(1);	
+}
+#chk:checked ~ .signup label{
+	transform: scale(.6);
+} */ -->
+
